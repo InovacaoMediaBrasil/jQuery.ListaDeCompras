@@ -1,2 +1,2 @@
 # ListaDeCompras
-API da aplicação Lista de Compras - Editora Inovação
+SDK JS da aplicação Lista de Compras - Editora Inovação
