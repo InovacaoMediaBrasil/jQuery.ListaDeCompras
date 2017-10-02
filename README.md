@@ -21,11 +21,11 @@ With this plugin you can manage your lists, [TODO] account preferences and get t
 
 The plugin working on Programa Arte Brasil:
 
-[![Lista de Compras no Programa Arte Brasil](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-ProgramaArteBrasil.PNG)]
+![Lista de Compras no Programa Arte Brasil](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-ProgramaArteBrasil.PNG)
 
 And in the Canal do Artesanato:
 
-[![Lista de Compras no Canal do Artesanato](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-CanalDoArtesanato.PNG)]
+![Lista de Compras no Canal do Artesanato](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-CanalDoArtesanato.PNG)
 
 ----------
 
