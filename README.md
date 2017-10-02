@@ -2,6 +2,11 @@
 
 jQuery plugin of the Lista de Compras platform
 
+[![NPM] (https://img.shields.io/npm/dt/jquerylistadecompras.svg)](https://www.npmjs.com/package/jquerylistadecompras)
+[![jQuery.ListaDeCompras NuGet Version](https://img.shields.io/nuget/v/jQuery.ListaDeCompras.svg)](https://www.nuget.org/packages/jQuery.ListaDeCompras/)
+[![jQuery.ListaDeCompras NuGet Downloads](https://img.shields.io/nuget/dt/jQuery.ListaDeCompras.svg)](https://www.nuget.org/packages/jQuery.ListaDeCompras/)
+[![Github All Releases](https://img.shields.io/github/downloads/guibranco/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/guibranco/jQuery.ListaDeCompras)
+
 Lista de Compras (Editora Inovação) is a application that allows you create a list of available products selling in Vitrine do Artesanto or Tania Silva store and show it on any website with a link to the cart of the store.
 
 With this plugin you can manage your lists, [TODO] account preferences and get the available products for building new lists.

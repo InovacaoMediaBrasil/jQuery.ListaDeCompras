@@ -1,0 +1,12 @@
+{
+	"name": "jquerylistadecompras",
+	"version": "1.0.1",
+	"description": "The Lista de Compras platform jQuery plugin",
+	"keywords": ["Lista de Compras", "ListaDeCompras", "jquery", "plugin", "Editora Inovação"],
+	"author": "Guilherme Branco Stracini <guilherme@editorainovacao.com.br>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/guibranco/jQuery.ListaDeCompras"
+	},
+	"homepage": "https://listadecompras.editorainovacao.com.br"
+}
