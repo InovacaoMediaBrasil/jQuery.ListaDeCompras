@@ -2,6 +2,7 @@
 
 jQuery plugin of the Lista de Compras platform
 
+[![Build status](https://ci.appveyor.com/api/projects/status/349rs8y8rk7vqnjw/branch/master?svg=true)](https://ci.appveyor.com/project/guibranco/jquery-listadecompras/branch/master)
 [![wakatime](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 [![NPM](https://img.shields.io/npm/dt/jquerylistadecompras.svg)](https://www.npmjs.com/package/jquerylistadecompras)
 [![jQuery.ListaDeCompras NuGet Version](https://img.shields.io/nuget/v/jQuery.ListaDeCompras.svg)](https://www.nuget.org/packages/jQuery.ListaDeCompras/)
