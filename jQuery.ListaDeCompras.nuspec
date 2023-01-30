@@ -10,7 +10,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://ti.editorainovacao.com.br/Docs/ListaDeCompras/API.pdf</projectUrl>
     <repository type="git" url="https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/" />
-    <license type="expression">Apache 2.0</license>
+    <license type="expression">Apache-2.0</license>
     <description>Shows the Lista de Compras, allow create new lists or edit existing, update account info.</description>
     <copyright>Copyright © 2017 Editora Inovação LTDA. All rights reserved.</copyright>
     <tags>listadecompras editora inovação api lista compras artesanato</tags>       
