@@ -3,10 +3,38 @@
 jQuery plugin of the Lista de Compras platform
 
 [![Build status](https://ci.appveyor.com/api/projects/status/349rs8y8rk7vqnjw/branch/master?svg=true)](https://ci.appveyor.com/project/guibranco/jquery-listadecompras/branch/master)
-[![wakatime](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
-[![NPM](https://img.shields.io/npm/dt/jquerylistadecompras.svg)](https://www.npmjs.com/package/jquerylistadecompras)
-[![jQuery.ListaDeCompras NuGet Version](https://img.shields.io/nuget/v/jQuery.ListaDeCompras.svg)](https://www.nuget.org/packages/jQuery.ListaDeCompras/)
-[![jQuery.ListaDeCompras NuGet Downloads](https://img.shields.io/nuget/dt/jQuery.ListaDeCompras.svg)](https://www.nuget.org/packages/jQuery.ListaDeCompras/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![time tracker](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+
+## NPM - Node Package Manager
+
+[![npm](https://img.shields.io/npm/v/jquerylistadecompras)](https://www.npmjs.com/package/jquerylistadecompras)
+[![npm](https://img.shields.io/npm/dy/jquerylistadecompras)](https://www.npmjs.com/package/jquerylistadecompras)
+
+Este repositório está disponível no NPM com o nome [jquerylistadecompras](https://www.npmjs.com/package/jquerylistadecompras).
+
+```bash
+
+npm i jquerylistadecompras
+
+```
+
+## NuGet - Package Manager for .NET
+
+[![jquery.listadecompras NuGet Version](https://img.shields.io/nuget/v/jquery.listadecompras.svg?style=flat)](https://www.nuget.org/packages/jquery.listadecompras/)
+[![jquery.listadecompras NuGet Downloads](https://img.shields.io/nuget/dt/jquery.listadecompras.svg?style=flat)](https://www.nuget.org/packages/BancosBjquery.listadecomprasrasileiros/)
+
+Este repositório está disponível no NPM com o nome [jquery.listadecompras](https://www.nuget.org/packages/jquery.listadecompras/).
+
+```bash
+
+dotnet add package jquery.listadecompras
+
+```
+
+---
+
 [![Github All Releases](https://img.shields.io/github/downloads/guibranco/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/guibranco/jQuery.ListaDeCompras)
 
 Lista de Compras (Editora Inovação) is a application that allows you create a list of available products selling in Vitrine do Artesanto or Tania Silva store and show it on any website with a link to the cart of the store.
