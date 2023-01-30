@@ -14,11 +14,13 @@ environment:
       secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
     
 install:
+- appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 - ps: Install-Product node $env:nodejs_version
 - ps: >- 
     npm install --loglevel=error
-    "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
     
+    "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
+
 build_script:
 - mkdir -p dist
 - copy README.md dist\
@@ -30,15 +32,25 @@ build_script:
 - git config user.name "AppVeyor"
 - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
 - npm publish
+- cd ..
+- cmd: nuget pack jquery.listadecompras.nuspec -Version %APPVEYOR_BUILD_VERSION%
 
 after_build:
 - 7z a -tzip -mx9 "jquery.listadecompras.%APPVEYOR_BUILD_VERSION%.zip" dist
 
 artifacts:
+- path: '**\*nupkg'
+  name: Package
+  
 - path: jquery.listadecompras.%APPVEYOR_BUILD_VERSION%.zip
   name: ZipFile
 
 deploy:
+- provider: Environment
+  name: NuGet
+  on:
+   branch: master
+  artifact: Package
 - provider: GitHub
   on:
    branch: master
