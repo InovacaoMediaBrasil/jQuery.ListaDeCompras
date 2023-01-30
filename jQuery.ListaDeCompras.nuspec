@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>jQuery.ListaDeCompras</id>
+    <version>3.0.0</version>
+    <readme>README.md</readme>
+    <title>Lista de Compras - jQuery plugin</title>
+    <authors>Guilherme Branco Stracini</authors>
+    <owners>Guilherme Branco Stracini</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://ti.editorainovacao.com.br/Docs/ListaDeCompras/API.pdf</projectUrl>
+    <repository type="git" url="https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/" />
+    <license type="expression">Apache 2.0</license>
+    <description>Shows the Lista de Compras, allow create new lists or edit existing, update account info.</description>
+    <copyright>Copyright © 2017 Editora Inovação LTDA. All rights reserved.</copyright>
+    <tags>listadecompras editora inovação api lista compras artesanato</tags>       
+  </metadata>
+  <files>
+    <file src="README.md" target="README.md" />
+  </files>
+</package>
