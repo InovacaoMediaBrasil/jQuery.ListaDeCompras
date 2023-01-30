@@ -16,6 +16,6 @@
     <tags>listadecompras editora inovação api lista compras artesanato</tags>       
   </metadata>
   <files>
-    <file src="README.md" target="README.md" />
+    <file src="README.nuget.md" target="README.md" />
   </files>
 </package>
