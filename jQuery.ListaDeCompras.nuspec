@@ -3,6 +3,7 @@
   <metadata>
     <id>jQuery.ListaDeCompras</id>
     <version>3.0.0</version>
+    <icon>logo.png</icon>
     <readme>README.md</readme>
     <title>Lista de Compras - jQuery plugin</title>
     <authors>Guilherme Branco Stracini</authors>
@@ -16,6 +17,7 @@
     <tags>listadecompras editora inovação api lista compras artesanato</tags>       
   </metadata>
   <files>
+    <file src="logo.png" />
     <file src="README.nuget.md" target="README.md" />
   </files>
 </package>
