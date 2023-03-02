@@ -7,6 +7,8 @@ jQuery plugin of the Lista de Compras platform
 [![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 [![time tracker](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 
+![jquery.ListaDeCompras logo](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/master/logo.png)
+
 ## NPM - Node Package Manager
 
 [![npm](https://img.shields.io/npm/v/jquerylistadecompras)](https://www.npmjs.com/package/jquerylistadecompras)
