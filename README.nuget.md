@@ -2,11 +2,13 @@
 
 jQuery plugin of the Lista de Compras platform
 
-[![Build status](https://ci.appveyor.com/api/projects/status/349rs8y8rk7vqnjw/branch/master?svg=true)](https://ci.appveyor.com/project/guibranco/jquery-listadecompras/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/349rs8y8rk7vqnjw/branch/main?svg=true)](https://ci.appveyor.com/project/guibranco/jquery-listadecompras/branch/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 [![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![Maintainability](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/maintainability)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/test_coverage)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/test_coverage)
 
-![jquery.ListaDeCompras logo](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/master/logo.png)
+![jquery.ListaDeCompras logo](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/main/logo.png)
 
 ## NPM - Node Package Manager
 
@@ -36,7 +38,7 @@ dotnet add package jquery.listadecompras
 
 ---
 
-[![Github All Releases](https://img.shields.io/github/downloads/guibranco/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/guibranco/jQuery.ListaDeCompras)
+[![Github All Releases](https://img.shields.io/github/downloads/InovacaoMediaBrasil/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 
 Lista de Compras (Editora Inovação) is a application that allows you create a list of available products selling in Vitrine do Artesanto or Tania Silva store and show it on any website with a link to the cart of the store.
 
@@ -50,11 +52,11 @@ With this plugin you can manage your lists, [TODO] account preferences and get t
 
 The plugin working on Programa Arte Brasil:
 
-![Lista de Compras no Programa Arte Brasil](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-ProgramaArteBrasil.PNG)
+![Lista de Compras no Programa Arte Brasil](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/main/ListaDeCompras-ProgramaArteBrasil.PNG)
 
 And in the Canal do Artesanato:
 
-![Lista de Compras no Canal do Artesanato](https://raw.githubusercontent.com/guibranco/jQuery.ListaDeCompras/master/ListaDeCompras-CanalDoArtesanato.PNG)
+![Lista de Compras no Canal do Artesanato](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/main/ListaDeCompras-CanalDoArtesanato.PNG)
 
 ----------
 
