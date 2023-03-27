@@ -39,7 +39,7 @@ dotnet add package jquery.listadecompras
 
 ---
 
-[![Github All Releases](https://img.shields.io/github/downloads/guibranco/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/guibranco/jQuery.ListaDeCompras)
+[![Github All Releases](https://img.shields.io/github/downloads/InovacaoMediaBrasil/jQuery.ListaDeCompras/total.svg?style=plastic)](https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 
 Lista de Compras (Editora Inovação) is a application that allows you create a list of available products selling in Vitrine do Artesanto or Tania Silva store and show it on any website with a link to the cart of the store.
 
