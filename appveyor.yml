@@ -1,12 +1,10 @@
 version: 3.0.{build}
 skip_tags: true
 skip_branch_with_pr: true
-skip_commits:
-    message: /(Create|Update).*\.(png|jpg|jpeg|bmp|gif|md)/
     
 branches:
     only:
-    - master
+    - main
     
 environment:
     nodejs_version: 14.3.0
@@ -49,11 +47,11 @@ deploy:
 - provider: Environment
   name: NuGet
   on:
-   branch: master
+   branch: main
   artifact: Package
 - provider: GitHub
   on:
-   branch: master
+   branch: main
   tag: $(appveyor_build_version)
   auth_token: $(GITHUB_TOKEN)
   force_update: true
