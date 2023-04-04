@@ -6,8 +6,10 @@ jQuery plugin of the Lista de Compras platform
 [![GitHub last commit](https://img.shields.io/github/last-commit/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 [![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 [![time tracker](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/maintainability)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/test_coverage)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/test_coverage)
+[![CodeFactor](https://www.codefactor.io/repository/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/badge)](https://www.codefactor.io/repository/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 
 ![jquery.ListaDeCompras logo](https://raw.githubusercontent.com/InovacaoMediaBrasil/jQuery.ListaDeCompras/main/logo.png)
 
