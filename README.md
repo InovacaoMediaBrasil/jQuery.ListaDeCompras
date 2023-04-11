@@ -3,9 +3,9 @@
 jQuery plugin of the Lista de Compras platform
 
 [![Build status](https://ci.appveyor.com/api/projects/status/349rs8y8rk7vqnjw/branch/main?svg=true)](https://ci.appveyor.com/project/guibranco/jquery-listadecompras/branch/main)
-[![GitHub last commit](https://img.shields.io/github/last-commit/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
-[![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
-[![time tracker](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![wakatime](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras.svg)](https://wakatime.com/badge/github/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![GitHub license](https://img.shields.io/github/license/InovacaoMediaBrasil/jQuery.ListaDeCompras)](https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras)
+[![GitHub last commit](https://img.shields.io/github/last-commit/InovacaoMediaBrasil/jQuery.ListaDeCompras/main)](https://github.com/InovacaoMediaBrasil/jQuery.ListaDeCompras)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/maintainability)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/55e52654e1280711eea8/test_coverage)](https://codeclimate.com/github/InovacaoMediaBrasil/jQuery.ListaDeCompras/test_coverage)
