@@ -184,6 +184,8 @@ $("#target").listaDeCompras("debug");
 ```
 ---
 
-Desenvolvido por [Guilherme Branco Stracini](https://www.guilhermebranco.com.br) para [Editora Inovação](https://www.editorainovacao.com.br) 
+Developed by [Guilherme Branco Stracini](https://www.guilhermebranco.com.br) for [Editora Inovação](https://www.editorainovacao.com.br) 
 
-© 2015 ~ 2018 All rights reserved.
+© 2016 ~ 2018 All rights reserved.
+
+---
