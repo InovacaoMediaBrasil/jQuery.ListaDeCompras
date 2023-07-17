@@ -50,7 +50,7 @@ deploy:
   on:
    branch: main
   artifact: Package
-  
+
 - provider: GitHub
   on:
    branch: main
