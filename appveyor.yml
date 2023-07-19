@@ -1,6 +1,7 @@
 version: 4.0.{build}
 skip_tags: true
 skip_branch_with_pr: true
+image: Visual Studio 2022
     
 branches:
     only:
@@ -8,8 +9,8 @@ branches:
     
 environment:
     nodejs_version: 14.3.0
-    GITHUB_TOKEN:
-      secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
+    npm_auth_token:
+        secure: utvTJFeOvz8YUfgc/z87ERaWZs4tDNSAe/atkmUagrQjaxniSCqXn0Q4U1UVx1ST
     
 install:
 - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
