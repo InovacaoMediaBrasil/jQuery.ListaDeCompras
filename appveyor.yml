@@ -8,12 +8,11 @@ branches:
     - main
     
 environment:
-    nodejs_version: 14.3.0
     npm_auth_token:
         secure: utvTJFeOvz8YUfgc/z87ERaWZs4tDNSAe/atkmUagrQjaxniSCqXn0Q4U1UVx1ST
     
 install:
-- ps: Install-Product node $env:nodejs_version
+- ps: Install-Product node
 - ps: >- 
     npm install --loglevel=error
     
