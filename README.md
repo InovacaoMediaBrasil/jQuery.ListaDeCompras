@@ -29,9 +29,8 @@ npm i jquerylistadecompras
 ## NuGet - Package Manager for .NET
 
 [![jquery.listadecompras NuGet Version](https://img.shields.io/nuget/v/jquery.listadecompras.svg?style=flat)](https://www.nuget.org/packages/jquery.listadecompras/)
-[![jquery.listadecompras NuGet Downloads](https://img.shields.io/nuget/dt/jquery.listadecompras.svg?style=flat)](https://www.nuget.org/packages/BancosBjquery.listadecomprasrasileiros/)
+[![jquery.listadecompras NuGet Downloads](https://img.shields.io/nuget/dt/jquery.listadecompras.svg?style=flat)](https://www.nuget.org/packages/jquery.listadecompras/)
 
-Este repositório está disponível no NPM com o nome [jquery.listadecompras](https://www.nuget.org/packages/jquery.listadecompras/).
 
 ```bash
 
