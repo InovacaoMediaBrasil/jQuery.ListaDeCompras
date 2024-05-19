@@ -155,7 +155,7 @@ h1,h2,h3,h4,h5,h6{margin:0;}
 
 .listaDeCompras table tbody tr td div.cart button[type="button"].quantity.less {
 	top: 25px;
-	border-radius:0px 0px 5px 0px;
+	border-radius:0px 0px 5px;
 }
 
 .listaDeCompras table tbody tr td div.cart button[type="button"].quantity.less:hover {
