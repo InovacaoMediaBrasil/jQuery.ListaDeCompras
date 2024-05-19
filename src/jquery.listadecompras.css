@@ -1,222 +1,271 @@
-*{}	
-body{
-	font-family: 'Arial', Helvetica Neue, sans-serif;
-	margin:0;
-	padding:0;
-	position:relative;
+* {
 }
-h1,h2,h3,h4,h5,h6{margin:0;}
+body {
+  font-family:
+    "Arial",
+    Helvetica Neue,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
 .listaDeCompras {
-	padding:1px;
-	border-radius:5px;
-	min-width: 310px;
+  padding: 1px;
+  border-radius: 5px;
+  min-width: 310px;
 }
 
-.listaDeCompras table thead tr th{
-	line-height:25px;
-	font-size:12px;
-	text-align:center;
+.listaDeCompras table thead tr th {
+  line-height: 25px;
+  font-size: 12px;
+  text-align: center;
 }
 
-.listaDeCompras table thead tr.header th{
-    color: #FFF;
-    font-size: 16px;
-    height: 25px;
-    padding: 5px;
+.listaDeCompras table thead tr.header th {
+  color: #fff;
+  font-size: 16px;
+  height: 25px;
+  padding: 5px;
 }
 
-.listaDeCompras table tbody tr td{
-	text-align: center;
-	vertical-align: middle;
+.listaDeCompras table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
 }
 
-.listaDeCompras table tbody td h6{
-	font-size:14px;
-	color:#333;
-	font-weight:300;
-	line-height: 18px;
+.listaDeCompras table tbody td h6 {
+  font-size: 14px;
+  color: #333;
+  font-weight: 300;
+  line-height: 18px;
 }
 
-.listaDeCompras table tbody td span{
-	font-size:14px;
-	color:#666;
-	font-weight:900;
+.listaDeCompras table tbody td span {
+  font-size: 14px;
+  color: #666;
+  font-weight: 900;
 }
 
-.listaDeCompras table tbody tr{
-	border:2px solid #fff;
-	line-height: 0;
+.listaDeCompras table tbody tr {
+  border: 2px solid #fff;
+  line-height: 0;
 }
 
-.listaDeCompras table tbody tr:nth-child(even){
-	background-color:#f0f0f0;
+.listaDeCompras table tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
 }
 
-.listaDeCompras table tbody tr:nth-child(odd){
-	background-color:#f6f6f6;
+.listaDeCompras table tbody tr:nth-child(odd) {
+  background-color: #f6f6f6;
 }
 
-.listaDeCompras table tbody tr td:first-child{
-	padding:0;
-	margin:0;
+.listaDeCompras table tbody tr td:first-child {
+  padding: 0;
+  margin: 0;
 }
 
-.listaDeCompras table tbody tr td:first-child img{
-	border: 1px solid #ddd;
-	width: 100px;
-	height: 100px;
-    margin: 5px 0;
+.listaDeCompras table tbody tr td:first-child img {
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 100px;
+  margin: 5px 0;
 }
 
 .listaDeCompras table tbody tr td input[type="checkbox"] {
-     display: none;
- }
- 
-.listaDeCompras table tbody tr td input[type="checkbox"] + .stockIcon {
-	width:20px;
-	height:20px;
-	display:block;
-	background-image:url('/Images/item_available.png');
-	background-repeat:no-repeat;
-    margin: 15px auto;
+  display: none;
 }
-.listaDeCompras table tbody tr td input[type="checkbox"][value="0"] + .stockIcon,
+
+.listaDeCompras table tbody tr td input[type="checkbox"] + .stockIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url("/Images/item_available.png");
+  background-repeat: no-repeat;
+  margin: 15px auto;
+}
+.listaDeCompras
+  table
+  tbody
+  tr
+  td
+  input[type="checkbox"][value="0"]
+  + .stockIcon,
 .listaDeCompras table tbody tr td .stockIcon.quantityZero {
-	background-image:url('/Images/item_unavailable.png') !important;
+  background-image: url("/Images/item_unavailable.png") !important;
 }
 
 .listaDeCompras table tbody tr td div.cart {
-	width: 45px;
-	height:30px;
-	margin: 0 auto;
-	position:relative;
-    top: -10px;
+  width: 45px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: -10px;
 }
 
 .listaDeCompras table tbody tr td div.cart input[type="text"].quantity {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 28px;
-	height: 48px;
-	border-radius: 2px;
-	background-color: #fff;
-	text-align: center;
-	font-size: 22px;
-	font-weight: 300;
-	color: #666;
-	border: 1px solid #999;
-	padding: 0;
-	margin: 0;
-    font-family: 'Arial', Helvetica Neue, sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 28px;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  color: #666;
+  border: 1px solid #999;
+  padding: 0;
+  margin: 0;
+  font-family:
+    "Arial",
+    Helvetica Neue,
+    sans-serif;
 }
 
-.listaDeCompras table tbody tr td div.cart input[type="text"].quantity:disabled{
-    background-color: #ddd!important;
-    box-shadow: inset 1px 1px 5px 0 rgba(0,0,0,.2);
-    cursor: not-allowed;
- }
- 
- .listaDeCompras table tbody tr td div.cart input[type="text"].quantity:focus {
-    box-shadow: inset 0 0 16px #ddd;
- }
- 
-.listaDeCompras table tbody tr td div.cart button[type="button"].quantity{
-	position: absolute;
-	left: 29px;
-	height: 25px;
-	line-height:1px;
-	width: 15px;
-	padding:0;
-	color:#666;
-	border:1px solid #999;
-	background-color: #e6e6e6;
-	background-image: -webkit-linear-gradient(#ffffff 100%, #e6e6e6 0);
-	background-image: linear-gradient(#ffffff 0%, #e6e6e6 100%);
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e6e6e6)); /* Chrome, Safari 4+ */
+.listaDeCompras
+  table
+  tbody
+  tr
+  td
+  div.cart
+  input[type="text"].quantity:disabled {
+  background-color: #ddd !important;
+  box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+.listaDeCompras table tbody tr td div.cart input[type="text"].quantity:focus {
+  box-shadow: inset 0 0 16px #ddd;
+}
+
+.listaDeCompras table tbody tr td div.cart button[type="button"].quantity {
+  position: absolute;
+  left: 29px;
+  height: 25px;
+  line-height: 1px;
+  width: 15px;
+  padding: 0;
+  color: #666;
+  border: 1px solid #999;
+  background-color: #e6e6e6;
+  background-image: -webkit-linear-gradient(#ffffff 100%, #e6e6e6 0);
+  background-image: linear-gradient(#ffffff 0%, #e6e6e6 100%);
+  background-image: -webkit-linear-gradient(
+    top,
+    #ffffff,
+    #e6e6e6
+  ); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ffffff),
+    to(#e6e6e6)
+  ); /* Chrome, Safari 4+ */
 }
 
 .listaDeCompras table tbody tr td div.cart button[type="button"]:disabled {
-    display:none;
-}
- 
-.listaDeCompras table tbody tr td div.cart button[type="button"].quantity.plus {
-	top:0;
-	border-radius:0px 5px 0px 0px;
-	border-bottom:0;
+  display: none;
 }
 
-.listaDeCompras table tbody tr td div.cart button[type="button"].quantity.plus:hover {
-	background: #A3C354;
-	color: #fff;
+.listaDeCompras table tbody tr td div.cart button[type="button"].quantity.plus {
+  top: 0;
+  border-radius: 0px 5px 0px 0px;
+  border-bottom: 0;
+}
+
+.listaDeCompras
+  table
+  tbody
+  tr
+  td
+  div.cart
+  button[type="button"].quantity.plus:hover {
+  background: #a3c354;
+  color: #fff;
 }
 
 .listaDeCompras table tbody tr td div.cart button[type="button"].quantity.less {
-	top: 25px;
-	border-radius:0px 0px 5px 0px;
+  top: 25px;
+  border-radius: 0px 0px 5px;
 }
 
-.listaDeCompras table tbody tr td div.cart button[type="button"].quantity.less:hover {
-	background: #BF4133;
-    color: #fff;
+.listaDeCompras
+  table
+  tbody
+  tr
+  td
+  div.cart
+  button[type="button"].quantity.less:hover {
+  background: #bf4133;
+  color: #fff;
 }
 
 .listaDeCompras table tfoot tr td p {
-	font-size:11px;padding: 0 5px;
+  font-size: 11px;
+  padding: 0 5px;
 }
 
 .listaDeCompras table tfoot tr td div.amount {
-	width:95%;
-	border:1px solid #97bb3f;
-	border-radius:5px;
-	display:inline-block;
-	background-color:#97bb3f;
+  width: 95%;
+  border: 1px solid #97bb3f;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #97bb3f;
 }
 
 .listaDeCompras table tfoot tr td div.amount span {
-	width:60%;
-	float: left;
-	padding:5px 0;
-	font-size:16px;
-	background-color:#fff;
-	border-radius:5px 0 0 5px;
+  width: 60%;
+  float: left;
+  padding: 5px 0;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 5px 0 0 5px;
 }
 
 .listaDeCompras table tfoot tr td div.amount span > b {
-	color:#97bb3f;
+  color: #97bb3f;
 }
 
-.listaDeCompras table tfoot tr td div.amount div.buy{
-	margin: 0 auto;
-	cursor: pointer;
-	width: 35%;
-	background: none;
-	color: #fff;
-	border: 0;
-	line-height: 28px;
-	font-size: 16px;
-	padding: 0;
-	text-decoration:none;
-    float: right;
+.listaDeCompras table tfoot tr td div.amount div.buy {
+  margin: 0 auto;
+  cursor: pointer;
+  width: 35%;
+  background: none;
+  color: #fff;
+  border: 0;
+  line-height: 28px;
+  font-size: 16px;
+  padding: 0;
+  text-decoration: none;
+  float: right;
 }
 
 @media (max-width: 940px) {
-	.listaDeCompras table tfoot tr td div.amount div.buy{
-		line-height: 50px!important;
-		font-size: 13px!important;
-		font-weight: 300;
-		display: inline-block;        
-	}
-	.listaDeCompras table tfoot tr td div.amount span{
-		height:40px;
-			width: 100%;
-	}
-	.listaDeCompras table tfoot tr td div.amount span > b{
-		display:block;
-			font-size:15px;
-	}
+  .listaDeCompras table tfoot tr td div.amount div.buy {
+    line-height: 50px !important;
+    font-size: 13px !important;
+    font-weight: 300;
+    display: inline-block;
+  }
+  .listaDeCompras table tfoot tr td div.amount span {
+    height: 40px;
+    width: 100%;
+  }
+  .listaDeCompras table tfoot tr td div.amount span > b {
+    display: block;
+    font-size: 15px;
+  }
 }
 
 /*		    Themes		    */
@@ -224,107 +273,107 @@ h1,h2,h3,h4,h5,h6{margin:0;}
 /*		Default Theme		*/
 
 .listaDeCompras.defaultTheme {
-	border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
-.listaDeCompras.defaultTheme table thead { 
-	background-color: #ddd;
+.listaDeCompras.defaultTheme table thead {
+  background-color: #ddd;
 }
 
 .listaDeCompras.defaultTheme table thead th {
-	color: #666;
+  color: #666;
 }
 
 .listaDeCompras.defaultTheme table thead tr.header th {
-    border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 /*		Orange Theme		*/
 
 .listaDeCompras.orangeTheme {
-	border:1px solid #fca24b;
+  border: 1px solid #fca24b;
 }
 
 .listaDeCompras.orangeTheme table thead {
-	background-color:#fca24b;
+  background-color: #fca24b;
 }
 
 .listaDeCompras.orangeTheme table thead th {
-	color:#fff;
+  color: #fff;
 }
 
 .listaDeCompras.orangeTheme table thead tr.header th {
-    border-bottom: 1px solid #FF6600;
+  border-bottom: 1px solid #ff6600;
 }
 
 /* 		Blue Theme		*/
 
 .listaDeCompras.blueTheme {
-	border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 .listaDeCompras.blueTheme table thead {
-	background-color:blue;
+  background-color: blue;
 }
 
 .listaDeCompras.blueTheme table thead th {
-	color:#fff;
+  color: #fff;
 }
 
 .listaDeCompras.blueTheme table thead tr.header th {
-    border-bottom: 1px solid deepskyblue;
+  border-bottom: 1px solid deepskyblue;
 }
 
 /*		Green Theme		*/
 
 .listaDeCompras.greenTheme {
-	border: 1px solid green;
+  border: 1px solid green;
 }
 
 .listaDeCompras.greenTheme table thead {
-	background-color:green;
+  background-color: green;
 }
 
 .listaDeCompras.greenTheme table thead th {
-	color:#fff;
+  color: #fff;
 }
 
 .listaDeCompras.greenTheme table thead tr.header th {
-    border-bottom: 1px solid springgreen;
+  border-bottom: 1px solid springgreen;
 }
 
 /*      Olive Drab Theme    */
 
 .listaDeCompras.oliveDrabTheme {
-    border: 1px solid #9AB95B;
+  border: 1px solid #9ab95b;
 }
 
 .listaDeCompras.oliveDrabTheme table thead {
-	background-color:#9AB95B;
+  background-color: #9ab95b;
 }
 
 .listaDeCompras.oliveDrabTheme table thead th {
-	color:#fff;
+  color: #fff;
 }
 
 .listaDeCompras.oliveDrabTheme table thead tr.header th {
-    border-bottom: 1px solid darkolivegreen;
+  border-bottom: 1px solid darkolivegreen;
 }
 
 /*		Red Theme		*/
 
 .listaDeCompras.redTheme {
-	border: 1px solid red;
+  border: 1px solid red;
 }
 
 .listaDeCompras.redTheme table thead {
-	background-color:red;
+  background-color: red;
 }
 
 .listaDeCompras.redTheme table thead th {
-	color:#fff;
+  color: #fff;
 }
 
 .listaDeCompras.redTheme table thead tr.header th {
-    border-bottom: 1px solid darkred;
+  border-bottom: 1px solid darkred;
 }
