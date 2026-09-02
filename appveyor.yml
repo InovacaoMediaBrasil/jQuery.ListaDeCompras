@@ -1,22 +1,19 @@
-version: 4.0.{build}
+version: 4.1.{build}
 skip_tags: true
 skip_branch_with_pr: true
 image: Visual Studio 2022
-    
+
 branches:
     only:
     - main
-    
+
+skip_commits:
+    files:
+    - .config/
+    - .github/
+
 environment:
-    npm_auth_token:
-        secure: utvTJFeOvz8YUfgc/z87ERaWZs4tDNSAe/atkmUagrQjaxniSCqXn0Q4U1UVx1ST
-    
-install:
-- ps: Install-Product node
-- ps: >- 
-    npm install --loglevel=error
-    
-    "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
+  nodejs_version: 24
 
 build_script:
 - mkdir -p dist
@@ -24,12 +21,6 @@ build_script:
 - copy package.json dist\
 - copy src\jquery.listadecompras.css dist\
 - copy src\jquery.listadecompras.js dist\
-- cd dist
-- git config user.email "build@appveyor.com"
-- git config user.name "AppVeyor"
-- npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
-- npm publish
-- cd ..
 - cmd: nuget pack jquery.listadecompras.nuspec -Version %APPVEYOR_BUILD_VERSION%
 
 after_build:
@@ -48,12 +39,13 @@ deploy:
   skip_symbols: true
   on:
    branch: main
-  artifact: Package
 
 - provider: GitHub
   on:
    branch: main
-  tag: $(appveyor_build_version)
+  tag: v$(appveyor_build_version)
+  release: Release v$(appveyor_build_version)
+  description: 'Release v$(appveyor_build_version)'
   auth_token: $(GITHUB_TOKEN)
   force_update: true
-  artifact: ZipFile, Package
+  artifact: Package
