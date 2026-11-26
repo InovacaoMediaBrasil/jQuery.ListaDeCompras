@@ -35,8 +35,7 @@ jobs:
           VERSION="${TAG#v}"
           mkdir -p dist
           cp README.md package.json dist/
-          cp src\jquery.listadecompras.css dist/
-          cp src\jquery.listadecompras.js dist/
+          cp src/jquery.listadecompras.css src/jquery.listadecompras.js dist/
           cd dist
           npm version "$VERSION" --no-git-tag-version --allow-same-version
 

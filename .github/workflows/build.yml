@@ -1,0 +1,117 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/dependabot.yml'
+      - '.github/workflows/infisical-secrets-check.yml'
+      - '.github/workflows/size-label.yml'
+      - '.github/workflows/sonar-cloud.yml'
+      - '**/*.PNG'
+      - '.deepsource.toml'
+      - '.wakatime-project'
+      - '_config.yml'
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and pack
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.gitversion.outputs.majorMinorPatch }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v4
+        with:
+          versionSpec: '6.x'
+
+      - name: Determine version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v4
+
+      - name: Assemble dist
+        env:
+          VERSION: ${{ steps.gitversion.outputs.majorMinorPatch }}
+        run: |
+          mkdir -p dist
+          cp README.md package.json dist/
+          cp src/jquery.listadecompras.css src/jquery.listadecompras.js dist/
+          (cd dist && npm version "$VERSION" --no-git-tag-version --allow-same-version)
+          zip -9 -r "jquery.listadecompras.$VERSION.zip" dist
+
+      - name: Pack NuGet package
+        env:
+          VERSION: ${{ steps.gitversion.outputs.majorMinorPatch }}
+        run: |
+          # The package has no code to build, so a throwaway SDK project
+          # just drives `dotnet pack` from the nuspec.
+          mkdir -p "$RUNNER_TEMP/pack"
+          cat > "$RUNNER_TEMP/pack/pack.csproj" <<EOF
+          <Project Sdk="Microsoft.NET.Sdk">
+            <PropertyGroup>
+              <TargetFramework>netstandard2.0</TargetFramework>
+              <IncludeBuildOutput>false</IncludeBuildOutput>
+              <NoWarn>\$(NoWarn);NU5110;NU5111;NU5128</NoWarn>
+              <NuspecFile>$GITHUB_WORKSPACE/jQuery.ListaDeCompras.nuspec</NuspecFile>
+              <NuspecBasePath>$GITHUB_WORKSPACE</NuspecBasePath>
+              <NuspecProperties>version=$VERSION</NuspecProperties>
+            </PropertyGroup>
+          </Project>
+          EOF
+          dotnet pack "$RUNNER_TEMP/pack/pack.csproj" --configuration Release --output "$GITHUB_WORKSPACE/nupkg"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: |
+            nupkg/*.nupkg
+            jquery.listadecompras.*.zip
+          if-no-files-found: error
+
+  release:
+    name: Create release
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      VERSION: ${{ needs.build.outputs.version }}
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: packages
+          path: packages
+
+      - name: Create GitHub release
+        run: |
+          gh release create "v$VERSION" packages/nupkg/*.nupkg packages/jquery.listadecompras.*.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Release v$VERSION" \
+            --generate-notes
+
+      # Releases created with GITHUB_TOKEN don't fire `release` events,
+      # so the publish workflows are dispatched explicitly.
+      - name: Trigger publish workflows
+        run: |
+          gh workflow run publish-nuget.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"
+          gh workflow run publish-npm.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"

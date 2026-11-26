@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>jQuery.ListaDeCompras</id>
-    <version>3.0.0</version>
+    <version>$version$</version>
     <icon>logo.png</icon>
     <readme>README.md</readme>
     <title>Lista de Compras - jQuery plugin</title>
@@ -14,10 +14,17 @@
     <license type="expression">Apache-2.0</license>
     <description>Shows the Lista de Compras, allow create new lists or edit existing, update account info.</description>
     <copyright>Copyright © 2017 Editora Inovação LTDA. All rights reserved.</copyright>
-    <tags>listadecompras editora inovação api lista compras artesanato</tags>       
+    <tags>listadecompras editora inovação api lista compras artesanato</tags>
+    <contentFiles>
+      <files include="any/any/**" buildAction="None" copyToOutput="false" />
+    </contentFiles>
   </metadata>
   <files>
     <file src="logo.png" />
     <file src="README.nuget.md" target="README.md" />
+    <file src="src/jquery.listadecompras.js" target="content/Scripts/jquery.listadecompras.js" />
+    <file src="src/jquery.listadecompras.css" target="content/Content/jquery.listadecompras.css" />
+    <file src="src/jquery.listadecompras.js" target="contentFiles/any/any/Scripts/jquery.listadecompras.js" />
+    <file src="src/jquery.listadecompras.css" target="contentFiles/any/any/Content/jquery.listadecompras.css" />
   </files>
 </package>
