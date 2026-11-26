@@ -102,7 +102,12 @@ jobs:
           path: packages
 
       - name: Create GitHub release
+        id: release
         run: |
+          if gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release v$VERSION already exists; skipping creation."
+            exit 0
+          fi
           gh release create "v$VERSION" packages/nupkg/*.nupkg packages/jquery.listadecompras.*.zip \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
@@ -110,8 +115,12 @@ jobs:
             --generate-notes
 
       # Releases created with GITHUB_TOKEN don't fire `release` events,
-      # so the publish workflows are dispatched explicitly.
-      - name: Trigger publish workflows
-        run: |
-          gh workflow run publish-nuget.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"
-          gh workflow run publish-npm.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"
+      # so the publish workflows are dispatched explicitly, independently
+      # of each other.
+      - name: Trigger NuGet publish
+        if: ${{ !cancelled() && steps.release.outcome == 'success' }}
+        run: gh workflow run publish-nuget.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"
+
+      - name: Trigger npm publish
+        if: ${{ !cancelled() && steps.release.outcome == 'success' }}
+        run: gh workflow run publish-npm.yml --repo "$GITHUB_REPOSITORY" --ref main -f version="$VERSION"
