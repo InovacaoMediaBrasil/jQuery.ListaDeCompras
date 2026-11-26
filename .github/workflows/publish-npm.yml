@@ -30,8 +30,9 @@ jobs:
         run: npm install -g npm@latest
 
       - name: Assemble package
+        env:
+          TAG: ${{ github.event.release.tag_name || format('v{0}', inputs.version) }}
         run: |
-          TAG="${{ github.event.release.tag_name || format('v{0}', inputs.version) }}"
           VERSION="${TAG#v}"
           mkdir -p dist
           cp README.md package.json dist/
